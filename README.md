@@ -19,8 +19,12 @@ various idiomatic selections of those. TypTr is but one such selection.
 
 ## Installation
 
-To keep up with ongoing development, clone this repo and run `pip install -e .`
-within it.
+Install into your (virtual) environment:
+
+    $ pip3 install typtr
+
+If you wish to use the development version of this tool, clone this repo and
+run `pip install -e .` within it.
 
 ## Usage
 
