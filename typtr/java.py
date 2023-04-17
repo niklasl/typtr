@@ -87,10 +87,18 @@ class JavaTranspiler(CStyleTranspiler):
         # TODO: Change back to just staticname + 'Common'?
         self._srcpath = srcpath
         self.staticname = upper_camelize(srcpath.with_suffix('').parts[-1])
-        self.package = str(srcpath.parent.with_suffix('')).replace('/', '.')
+
+        usepath = srcpath.parent
+        if str(usepath) == '.':
+            usepath = srcpath
+
+        dirpath = str(usepath.with_suffix(''))
+        self.package = dirpath.replace('/', '.')
+
         self.filename = (Path(self.outdir) /
                 self.package.replace('.', '/') /
                 self.staticname).with_suffix('.java')
+
         self._current_imports = []
         self._output_prelude()
         yield
