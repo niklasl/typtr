@@ -12,7 +12,7 @@ authors = [
     {name = "Niklas Lindström", email = "lindstream@gmail.com"},
 ]
 description = "A transpiler for an idiomatic subset of typed Python into semantically similar object-oriented languages."
-license = "ISC"
+license = {text = "ISC License"}
 
 [project.scripts]
 typtr = "typtr.cli:main"
