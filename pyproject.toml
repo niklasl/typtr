@@ -14,3 +14,5 @@ authors = [
 description = "A transpiler for an idiomatic subset of typed Python into semantically similar object-oriented languages."
 license = "ISC"
 
+[project.scripts]
+typtr = "typtr.cli:main"
